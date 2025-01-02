@@ -18,6 +18,7 @@ header {
   left: 0;
   width: 100%;
   padding: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.2) -4px 5px 8px -5px;
 }
 
 header > h1 {
@@ -43,7 +44,9 @@ header > h1 {
 
 .wrapper .inputarea {
   display: flex;
-  gap: 2rem;
+  column-gap: 2rem;
+  row-gap: 0.5rem;
+  padding-bottom: 2rem;
 }
 .wrapper .inputarea > div {
   width: 100%;
@@ -75,6 +78,7 @@ header > h1 {
   padding-bottom: 3rem;
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .cardbox .card {
@@ -99,13 +103,6 @@ header > h1 {
   width: 100%;
 }
 
-/* SP時の文字サイズ調整 */
-@media (max-width: 599px) {
-  .vertical-slider__slide {
-    font-size: 16vw;
-  }
-}
-
 .question-wrap {
   padding-bottom: 2rem;
 }
@@ -115,11 +112,13 @@ header > h1 {
   border-bottom: 1px dotted black;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
 .question > div {
   display: flex;
-  gap: 2rem;
+  column-gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .document-wrap {
@@ -142,4 +141,16 @@ header > h1 {
   padding: 1rem;
   background-color: #e4e4f6;
   margin-bottom: 2rem;
+}
+
+/* SP時の文字サイズ調整 */
+@media (max-width: 599px) {
+  .vertical-slider__slide {
+  }
+  .wrapper > h2 {
+    font-size: 1.2rem;
+  }
+  .wrapper .inputarea {
+    flex-wrap: wrap;
+  }
 }
