@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,55 +20,354 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
       <h1 class="noto-sans-jp">申請DX</h1>
     </header>
     <body>
-      <div class="wrapper">
-        <h2>申請する自治体を選択してください</h2>
-        <div class="inputarea">
-          <div>
-            <label for="region">地域</label>
-            <select
-              id="region"
-              class="form-select"
-              aria-label="Default select example"
-            ></select>
+      <div class="swiper-container vertical-slider">
+        <div class="swiper-wrapper vertical-slider__wrapper">
+          <div id="slide1" class="swiper-slide vertical-slider__slide">
+            <div class="wrapper">
+              <h2>申請する自治体を選択してください</h2>
+              <div class="inputarea">
+                <div>
+                  <label for="region">地域</label>
+                  <select
+                    id="region"
+                    class="form-select"
+                    aria-label="Default select example"
+                  ></select>
+                </div>
+                <div>
+                  <label for="prefecture">都道府県</label>
+                  <select
+                    id="prefecture"
+                    class="form-select"
+                    aria-label="Default select example"
+                  ></select>
+                </div>
+                <div>
+                  <label for="city">市区</label>
+                  <select
+                    id="city"
+                    class="form-select"
+                    aria-label="Default select example"
+                  ></select>
+                </div>
+              </div>
+              <div class="button-wrap">
+                <a href="#slide2" class="button">次へ</a>
+              </div>
+            </div>
           </div>
-          <div>
-            <label for="prefecture">都道府県</label>
-            <select
-              id="prefecture"
-              class="form-select"
-              aria-label="Default select example"
-            ></select>
+          <div id="slide2" class="swiper-slide vertical-slider__slide">
+            <div class="wrapper">
+              <h2>関連するキーワードをすべて選択してください</h2>
+              <div class="cardbox">
+                <div class="card">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="card1"
+                    />
+                    <label class="form-check-label" for="card1">
+                      建築関連
+                    </label>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="card2"
+                    />
+                    <label class="form-check-label" for="card2">
+                      消費生活製品関連
+                    </label>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="card3"
+                    />
+                    <label class="form-check-label" for="card3">
+                      電気用品
+                    </label>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="card4"
+                    />
+                    <label class="form-check-label" for="card4">
+                      高圧ガス
+                    </label>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="card5"
+                    />
+                    <label class="form-check-label" for="card5">
+                      食品医療
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="button-wrap">
+                <a href="#slide1" class="button reverse">前へ</a>
+                <a href="#slide3" class="button">次へ</a>
+              </div>
+            </div>
           </div>
-          <div>
-            <label for="city">市区</label>
-            <select
-              id="city"
-              class="form-select"
-              aria-label="Default select example"
-            ></select>
+          <div id="slide3" class="swiper-slide vertical-slider__slide">
+            <div class="wrapper">
+              <h2>電気用品に関連して、以下に回答してください。</h2>
+              <div class="question-wrap">
+                <div class="question">
+                  <h6>RFIDリーダーは利用対象ですか？</h6>
+                  <div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        value=""
+                        name="q1"
+                        id="q1_1"
+                      />
+                      <label class="form-check-label" for="q1_1"> はい </label>
+                    </div>
+
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        value=""
+                        name="q1"
+                        id="q1_2"
+                      />
+                      <label class="form-check-label" for="q1_2">
+                        いいえ
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="question">
+                  <h6>送信出力を選択してください</h6>
+                  <div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        value=""
+                        name="q2"
+                        id="q2_1"
+                      />
+                      <label class="form-check-label" for="q2_1">
+                        1W以下
+                      </label>
+                    </div>
+
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        value=""
+                        name="q2"
+                        id="q2_2"
+                      />
+                      <label class="form-check-label" for="q2_2">
+                        250mW以下
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="question">
+                  <h6>ハンディタイプの製品ですか？</h6>
+                  <div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        value=""
+                        name="q3"
+                        id="q3_1"
+                      />
+                      <label class="form-check-label" for="q3_1"> はい </label>
+                    </div>
+
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        value=""
+                        name="q3"
+                        id="q3_2"
+                      />
+                      <label class="form-check-label" for="q3_2">
+                        いいえ
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="question">
+                  <h6>どこで使用しますか？</h6>
+                  <div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        value=""
+                        name="q4"
+                        id="q4_1"
+                      />
+                      <label class="form-check-label" for="q4_1">
+                        1つの構内のみで使用
+                      </label>
+                    </div>
+
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        value=""
+                        name="q4"
+                        id="q4_2"
+                      />
+                      <label class="form-check-label" for="q4_2">
+                        外への持ち出しや、移動先でも使用する
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="question">
+                  <h6>申請の単位を教えてください</h6>
+                  <div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        value=""
+                        name="q5"
+                        id="q5_1"
+                      />
+                      <label class="form-check-label" for="q5_1">
+                        1台ずつ申請する
+                      </label>
+                    </div>
+
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        value=""
+                        name="q5"
+                        id="q5_2"
+                      />
+                      <label class="form-check-label" for="q5_2">
+                        複数台申請する
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="button-wrap">
+                <a href="#slide2" class="button reverse">戻る</a>
+                <a href="#slide4" class="button">次へ</a>
+              </div>
+            </div>
+          </div>
+          <div id="slide4" class="swiper-slide vertical-slider__slide">
+            <div class="wrapper">
+              <h2>検証結果</h2>
+
+              <div>
+                <h6>・以下の申請が必要です。</h6>
+                <div class="document-wrap">
+                  <a
+                    class="document"
+                    href="https://www.soumu.go.jp/main_content/000956788.pdf"
+                    >包括登録申請</a
+                  >
+                  <a class="draft">記入例</a>
+                </div>
+                <div class="document-wrap">
+                  <a
+                    class="document"
+                    href="https://www.soumu.go.jp/main_content/000862708.pdf"
+                    >開設届</a
+                  >
+                  <a class="draft">記入例</a>
+                </div>
+              </div>
+              <div>
+                <h6>
+                  ・指定された地域では、さらに以下の条例が適用されています。
+                </h6>
+                <div class="document-wrap">
+                  <a
+                    class="document"
+                    href="https://krr001.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf"
+                    >静岡市建築基準法施行細則</a
+                  >
+                </div>
+              </div>
+              <div class="wrap">
+                <h6>
+                  ・類似した事例で、企業の細則に抵触した例があります。<br />　事例を確認し、対応が必要か検討してください。
+                </h6>
+                <div class="document-wrap">
+                  <a
+                    class="draft"
+                    href="https://krr001.legal-square.com/HAS-Shohin/page/SJSrbLogin.jsf"
+                    >事例</a
+                  >
+                </div>
+              </div>
+
+              <div class="button-wrap">
+                <a href="#slide3" class="button reverse">戻る</a>
+              </div>
+            </div>
           </div>
         </div>
-
-        <h2>関連するキーワードをすべて選択してください</h2>
-
-        <button class="button">次へ</button>
+        <div class="swiper-pagination vertical-slider__pagination"></div>
       </div>
     </body>
     <footer></footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="main.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
